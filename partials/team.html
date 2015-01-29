@@ -1,0 +1,40 @@
+<section id="main">
+  <a href="./#/teams"><- Back to drivers list</a>
+  <nav id="secondary" class="main-nav">
+    <div class="driver-picture">
+    <div ng-show="team">{{team.Team.teamId}}</div>
+       <table class="">
+      <thead>
+        <tr><th colspan="5"Players</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team details</td>
+        </tr>
+        <tr ng-repeat="player in team.players">
+          <td>{{$index + 1}}</td>
+          <td>{{player.name}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </nav>
+
+  <div class="main-content">
+    <table class="result-table">
+      <thead>
+        <tr><th colspan="5">Fixtures</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>fixtures</td>
+        </tr>
+        <tr ng-repeat="fixture in fixtures.fixtures">
+        <td>{{$index + 1}}</td>
+        <td>{{fixture.awayTeam}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Football  Feeder</title>
+</head>
+
+<body ng-app="PremierLeagueApp" >
+<!--h1>{{teamsList.leagueCaption}}</h1>
+<h2>Matchday {{teamsList.matchday}}</h2>
+  <table>
+    <thead>
+      <tr><th colspan="4">Teams</th></tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="team in teamsList.standing">
+        <td>{{$index + 1}}</td>
+        
+        <td><img src="{{team.crestUrl}}" width="20px"></td>
+        <td><a href="#/teams/{{team.playedGames}}">
+              {{team.teamName}}
+              </a></td>
+        <td>{{team.playedGames}}</td>
+        <td>{{team.points}}</td>
+        <td>{{team.goals}}</td>
+        <td>{{team.goalsAgainst}}</td>
+        <td>{{team.goalDifference}}</td>
+      </tr>
+    </tbody>
+  </table-->
+<ng-view></ng-view>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+</body>
+</html>
