@@ -24,5 +24,10 @@ angular.module('PremierLeagueApp.services', []).
 		return $http.get('http://www.football-data.org/teams/'+ id +'/fixtures/?callback=JSON_CALLBACK');
     };
 
+     footballdataAPI.getTeamDetails = function(id) {
+  		$http.defaults.headers.common['Auth-Token'] = '613a6b6937394ae8a94d69f358f76902';
+		return $http.get('http://api.football-data.org/teams/'+ id +'/?callback=JSON_CALLBACK');
+    };
+
     return footballdataAPI;
   });

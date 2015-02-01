@@ -9,8 +9,8 @@
       <tr ng-repeat="team in teamsList">
         <td>{{$index + 1}}</td>
         
-        <td><a href="#/teams/{{team._links.team.href}}">
-              {{team.teamName}}
+        <td><a href="#/teams/{{teamID(team._links.team.href)}}">
+              {{teamName(team.teamName)}}
               </a></td>
         <td>{{team.playedGames}}</td>
         <td>{{team.points}}</td>
