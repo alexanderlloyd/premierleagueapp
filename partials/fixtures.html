@@ -7,15 +7,25 @@
   <div class="main-content">
     <table class="result-table">
       <thead>
-        <tr><th colspan="5">Fixtures</th></tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>fixtures</td>
-        </tr>
         <tr ng-repeat="fixture in fixtures.fixtures | upComingFixtures">
-        <td>{{$index + 1}}</td>
+        <td>{{fixture.matchday}}</td>
+        <td>{{fixture.homeTeam}}</td>
+        <td>vs.</td>
         <td>{{teamName(fixture.awayTeam)}}</td>
+        <td>{{fixture.goalsHomeTeam}}</td>
+        <td>-</td>
+        <td>{{fixture.goalsAwayTeam}}</td>
       </tr>
       </tbody>
     </table>

@@ -2,34 +2,15 @@
 <html>
 <head>
   <title>Football  Feeder</title>
-    <link rel="stylesheet" href="css/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,400italic,700,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/app.css">
+
 </head>
 
 <body ng-app="PremierLeagueApp" >
-<!--h1>{{teamsList.leagueCaption}}</h1>
-<h2>Matchday {{teamsList.matchday}}</h2>
-  <table>
-    <thead>
-      <tr><th colspan="4">Teams</th></tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="team in teamsList.standing">
-        <td>{{$index + 1}}</td>
-        
-        <td><img src="{{team.crestUrl}}" width="20px"></td>
-        <td><a href="#/teams/{{team.playedGames}}">
-              {{team.teamName}}
-              </a></td>
-        <td>{{team.playedGames}}</td>
-        <td>{{team.points}}</td>
-        <td>{{team.goals}}</td>
-        <td>{{team.goalsAgainst}}</td>
-        <td>{{team.goalDifference}}</td>
-      </tr>
-    </tbody>
-  </table-->
+<div class="container">
   <div class="page {{ pageClass }}" ng-view></div>
-<!--ng-view></ng-view-->
+</div>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
    <script src="bower_components/angular-animate/angular-animate.js"></script>

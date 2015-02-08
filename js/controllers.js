@@ -21,7 +21,7 @@ angular.module('PremierLeagueApp.controllers', [])
 	};
     footballdataAPIservice.getTeams().success(function (response) {
         //Dig into the response to get the relevant data
-        $scope.teamsList = response.standing;
+        $scope.teamsList = response;
     });
 
   })
@@ -49,7 +49,7 @@ angular.module('PremierLeagueApp.controllers', [])
     $scope.fixtures = [];
     $scope.teamDetails = [];
     $scope.pageClass = 'page-fixtures';
-    
+
 
 
     /* filter team name - remove FC, London AFC*/

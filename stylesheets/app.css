@@ -1,0 +1,368 @@
+/* app css stylesheet */
+/* BASE STYLES
+============================================================================= */
+/* line 6, ../sass/app.scss */
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+/* line 7, ../sass/app.scss */
+body {
+  background-color: #000;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../sass/app.scss */
+.page {
+  width: 100%;
+}
+
+/* line 21, ../sass/app.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 26, ../sass/app.scss */
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 34, ../sass/app.scss */
+h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 42, ../sass/app.scss */
+.page a {
+  margin-top: 50px;
+}
+
+/* line 43, ../sass/app.scss */
+#about {
+  color: #333;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  width: 100%;
+}
+
+/* PAGES
+============================================================================= */
+/* line 48, ../sass/app.scss */
+.container {
+  max-width: 800px;
+  margin: 30px auto 0px auto;
+  width: 100%;
+}
+
+/* line 54, ../sass/app.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 30px 0 0 0;
+}
+/* line 60, ../sass/app.scss */
+table td, table th {
+  text-align: left;
+  white-space: nowrap;
+  padding: 2px 0 5px;
+}
+/* line 67, ../sass/app.scss */
+table thead tr th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+/* line 72, ../sass/app.scss */
+table th {
+  font-weight: 700;
+}
+/* line 76, ../sass/app.scss */
+table tbody > tr:nth-child(2n+1) {
+  font-weight: 100;
+}
+/* line 80, ../sass/app.scss */
+table tbody > tr:nth-child(2n+2) {
+  font-weight: 300;
+}
+
+/* line 90, ../sass/app.scss */
+table.league tbody > tr:nth-child(5) td {
+  border-top: 1px dotted rgba(255, 255, 255, 0.25);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.25);
+}
+/* line 95, ../sass/app.scss */
+table.league tbody > tr:nth-child(18) td {
+  border-top: 1px dotted rgba(255, 255, 255, 0.25);
+}
+
+/* line 100, ../sass/app.scss */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 105, ../sass/app.scss */
+.teams {
+  text-transform: uppercase;
+}
+
+/* line 109, ../sass/app.scss */
+.page-home {
+  background: #00D0BC;
+  color: #00907c;
+}
+
+/* line 110, ../sass/app.scss */
+.page-about {
+  background: #E59400;
+  color: #a55400;
+}
+
+/* line 111, ../sass/app.scss */
+.page-contact {
+  background: #ffa6bb;
+  color: #9e0000;
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* line 116, ../sass/app.scss */
+.page.ng-leave {
+  z-index: 9999;
+}
+
+/* line 117, ../sass/app.scss */
+.page.ng-enter {
+  z-index: 8888;
+}
+
+/* page specific animations ------------------------ */
+/* league -------------------------- */
+/* line 122, ../sass/app.scss */
+.page-league.ng-leave {
+  -webkit-transform-origin: 0% 0%;
+  -webkit-animation: rotateFall 1s both ease-in;
+  -moz-transform-origin: 0% 0%;
+  -moz-animation: rotateFall 1s both ease-in;
+  transform-origin: 0% 0%;
+  animation: rotateFall 1s both ease-in;
+}
+
+/* line 130, ../sass/app.scss */
+.page-league.ng-enter {
+  -webkit-animation: scaleUp 0.5s both ease-in;
+  -moz-animation: scaleUp 0.5s both ease-in;
+  animation: scaleUp 0.5s both ease-in;
+}
+
+/* team ------------------------ */
+/* line 137, ../sass/app.scss */
+.page-team.ng-leave {
+  -webkit-animation: slideOutLeft 0.5s both ease-in;
+  -moz-animation: slideOutLeft 0.5s both ease-in;
+  animation: slideOutLeft 0.5s both ease-in;
+}
+
+/* line 142, ../sass/app.scss */
+.page-team.ng-enter {
+  -webkit-animation: slideInRight 0.5s both ease-in;
+  -moz-animation: slideInRight 0.5s both ease-in;
+  animation: slideInRight 0.5s both ease-in;
+}
+
+/* fixtures ---------------------- */
+/* line 149, ../sass/app.scss */
+.page-fixtures.ng-leave {
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation: rotateOutNewspaper .5s both ease-in;
+  -moz-transform-origin: 50% 50%;
+  -moz-animation: rotateOutNewspaper .5s both ease-in;
+  transform-origin: 50% 50%;
+  animation: rotateOutNewspaper .5s both ease-in;
+}
+
+/* line 157, ../sass/app.scss */
+.page-fixtures.ng-enter {
+  -webkit-animation: slideInUp 0.5s both ease-in;
+  -moz-animation: slideInUp 0.5s both ease-in;
+  animation: slideInUp 0.5s both ease-in;
+}
+
+/* rotate and fall */
+@-webkit-keyframes rotateFall {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(10deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+  40% {
+    -webkit-transform: rotateZ(17deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(16deg);
+  }
+  100% {
+    -webkit-transform: translateY(100%) rotateZ(17deg);
+  }
+}
+@-moz-keyframes rotateFall {
+  0% {
+    -moz-transform: rotateZ(0deg);
+  }
+  20% {
+    -moz-transform: rotateZ(10deg);
+    -moz-animation-timing-function: ease-out;
+  }
+  40% {
+    -moz-transform: rotateZ(17deg);
+  }
+  60% {
+    -moz-transform: rotateZ(16deg);
+  }
+  100% {
+    -moz-transform: translateY(100%) rotateZ(17deg);
+  }
+}
+@keyframes rotateFall {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: rotateZ(17deg);
+  }
+  60% {
+    transform: rotateZ(16deg);
+  }
+  100% {
+    transform: translateY(100%) rotateZ(17deg);
+  }
+}
+/* scale up */
+@keyframes scaleUp {
+  from {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+@-moz-keyframes scaleUp {
+  from {
+    opacity: 0.3;
+    -moz-transform: scale(0.8);
+  }
+}
+@-webkit-keyframes scaleUp {
+  from {
+    opacity: 0.3;
+    -webkit-transform: scale(0.8);
+  }
+}
+/* slide in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideInRight {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+/* slide in from the bottom */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes slideInUp {
+  from {
+    -moz-transform: translateY(100%);
+  }
+  to {
+    -moz-transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-moz-keyframes slideOutLeft {
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+/* rotate out newspaper */
+@-webkit-keyframes rotateOutNewspaper {
+  to {
+    -webkit-transform: translateZ(-3000px) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+@-moz-keyframes rotateOutNewspaper {
+  to {
+    -moz-transform: translateZ(-3000px) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+@keyframes rotateOutNewspaper {
+  to {
+    transform: translateZ(-3000px) rotateZ(360deg);
+    opacity: 0;
+  }
+}

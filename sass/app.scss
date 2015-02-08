@@ -3,39 +3,71 @@
 /* BASE STYLES
 ============================================================================= */
 
-html         { overflow-y:hidden; }
+html         { font-size: 62.5%; margin:0; padding:0; overflow-y:hidden;}
 body{
 	  background-color: #000;
 	  font-family: 'Lato', sans-serif;
 	  color:#fff;
+	  font-size:16px;
+	  font-size: 1.6rem;
+	  line-height:1.35;
+	  margin:0; padding:0;
 }
 .page        {  
 	width:100%; 
 	
 }
 
-.page h1 	{ font-size:60px; }
+h1 , h2, h3, h4, h5, h6{
+	margin:0;
+	padding:0;
+}
+
+h1 	{  
+	font-size:24px;
+	font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+h2 	{  
+	font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .page a     { margin-top:50px; }
 #about      { color:#333; position:absolute; text-align:center; top:50px; width:100%; }
 
 /* PAGES
 ============================================================================= */
 
-table {
+.container{
+	max-width:800px;
+    margin:30px auto 0px auto;
     width: 100%;
-    max-width:960px;
-    margin:0 auto;
 }
 
-thead{
-	border-bottom: 1px solid #fff;
-}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin:30px 0 0 0;
 
 td, th {
     text-align: left;
     white-space: nowrap;
-    
+    padding:2px 0 5px
+   
 }
+
+thead tr th{
+border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
 
 th {
 	font-weight:700;
@@ -44,8 +76,25 @@ th {
 tbody > tr:nth-child(2n+1){
 	font-weight:100;
 }
-tbody > tr:nth-child(2n+2){
-	font-weight:300;
+
+	tbody > tr:nth-child(2n+2){
+		font-weight:300;
+	}
+
+
+}
+
+table.league{
+
+
+	tbody > tr:nth-child(5) td{
+	 border-top: 1px dotted rgba(255,255,255,0.25);
+	 border-bottom: 1px dotted rgba(255,255,255,0.25);
+	}
+
+tbody > tr:nth-child(18) td{
+	 border-top: 1px dotted rgba(255,255,255,0.25);
+	}
 }
 
 a{
