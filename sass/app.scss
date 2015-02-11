@@ -12,6 +12,7 @@ body{
 	  font-size: 1.6rem;
 	  line-height:1.35;
 	  margin:0; padding:0;
+	  letter-spacing: 0.02em;
 }
 .page        {  
 	width:100%; 
@@ -49,6 +50,12 @@ h2 	{
 	max-width:800px;
     margin:30px auto 0px auto;
     width: 100%;
+}
+
+.page-league{
+	.container{
+		max-width:500px;
+	}
 }
 
 table{
@@ -102,8 +109,19 @@ a{
 	color:#fff;
 }
 
-.teams{
-	text-transform: uppercase;
+
+.page-fixtures {
+	.container{
+		max-width: 610px;
+		}
+		table tbody td:nth-child(2){
+			text-align: right;
+		}
+
+ 		table tbody td:nth-child(3){
+			text-align: center;
+			font-weight:100;
+		}
 }
 
 .page-home 		{ background:#00D0BC; color:#00907c; }

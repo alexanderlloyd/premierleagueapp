@@ -1,4 +1,6 @@
-<section id="main">
+<div class="wrapper {{teamDetails.name | removeSpacesThenLowercase}}">
+<div class="container ">
+  <section id="main">
   <a href="./#/teams">League table</a>
    <a href="./#/fixtures/{{teamDetails.id}}">Fixtures</a>
   <div>
@@ -19,14 +21,16 @@
       </thead>
       <tbody>
         <tr ng-repeat="player in team.players">
+          <td>{{player.jerseyNumber}}</td>          
           <td>{{player.name}}</td>
           <td>{{player.position}}</td>
-          <td>{{player.jerseryNumber}}</td>
-          <td>{{player.dateOfBirth}}</td>
+          <td>{{calculateAge(player.dateOfBirth ) }}</td>
           <td>{{player.nationality}}</td>
-          <td>{{player.contractUntil}}</td>
+          <td>{{player.contractUntil | cmdate:'MM/dd/yyyy'}}</td>
           <td>{{player.marketValue}}</td>
         </tr>
       </tbody>
     </table>
 </section>
+</div>
+</div>

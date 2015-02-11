@@ -33,6 +33,15 @@ angular.module('PremierLeagueApp.controllers', [])
     $scope.teamDetails = [];
     $scope.pageClass = 'page-team';
 
+
+
+  /*Calculate age */
+   $scope.calculateAge = function(birthday) { // pass in player.dateOfBirth
+    var ageDifMs = Date.now() - new Date(birthday);
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+	}
+
     footballdataAPIservice.getTeam($scope.id).success(function (response) {
         $scope.team = response; 
     });
@@ -50,7 +59,16 @@ angular.module('PremierLeagueApp.controllers', [])
     $scope.teamDetails = [];
     $scope.pageClass = 'page-fixtures';
 
+  
 
+    /* filter team name - remove FC, London AFC*/
+    $scope.score= function(score) {
+       	if (score < 0){
+	    	return "_";
+		} else {
+			return score;
+		}
+	};  
 
     /* filter team name - remove FC, London AFC*/
     $scope.teamName = function(name) {

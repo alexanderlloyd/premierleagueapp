@@ -20,4 +20,17 @@ console.log(currentTime);
   }
   return filtered_list;
 }
-});
+})
+.filter('cmdate', [
+    '$filter', function($filter) {
+        return function(input, format) {
+            return $filter('date')(new Date(input), format);
+        };
+    }
+])
+.filter('removeSpacesThenLowercase', function () {
+       		 return function (text) {
+      		var str = text.replace(/\s+/g, '');
+      		return str.toLowerCase();
+        };
+})

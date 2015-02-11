@@ -1,3 +1,5 @@
+<div class="wrapper {{teamDetails.name | removeSpacesThenLowercase }}">
+<div class="container ">
 <section id="main">
   <a href="./#/teams">League table</a>
   <a href="./#/teams/{{teamDetails.id}}">Squad</a>
@@ -18,17 +20,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="fixture in fixtures.fixtures | upComingFixtures">
-        <td>{{fixture.matchday}}</td>
+        <tr ng-repeat="fixture in fixtures.fixtures ">
+        <td>{{fixture.date | cmdate:'MM/dd/yyyy'}}</td>
         <td>{{fixture.homeTeam}}</td>
         <td>vs.</td>
         <td>{{teamName(fixture.awayTeam)}}</td>
-        <td>{{fixture.goalsHomeTeam}}</td>
+        <td>{{score(fixture.goalsHomeTeam)}}</td>
         <td>-</td>
-        <td>{{fixture.goalsAwayTeam}}</td>
+        <td>{{score(fixture.goalsAwayTeam)}}</td>
       </tr>
       </tbody>
     </table>
   </div>
 
 </section>
+</div>
+</div>
