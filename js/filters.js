@@ -28,9 +28,9 @@ console.log(currentTime);
         };
     }
 ])
-.filter('removeSpacesThenLowercase', function () {
-       		 return function (text) {
-      		var str = text.replace(/\s+/g, '');
-      		return str.toLowerCase();
-        };
-})
+.filter('nospace', function () {
+	return function (value) {
+	var str = (!value) ? '' : value.replace(/ /g, '');
+	return str.toLowerCase();
+	};
+}); 

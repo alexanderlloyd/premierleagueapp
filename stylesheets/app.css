@@ -1,7 +1,144 @@
 /* app css stylesheet */
+/* line 3, ../sass/app.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 24, ../sass/app.scss */
+body {
+  line-height: 1;
+}
+
+/* line 28, ../sass/app.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 33, ../sass/app.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/app.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../sass/app.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 47, ../sass/app.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+/* line 56, ../sass/app.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+/* line 63, ../sass/app.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 70, ../sass/app.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 74, ../sass/app.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 79, ../sass/app.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+/* line 85, ../sass/app.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 94, ../sass/app.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* slightly enhanced, universal clearfix hack */
+/* line 99, ../sass/app.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 107, ../sass/app.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+/* line 109, ../sass/app.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 110, ../sass/app.scss */
+.clearfix {
+  display: block;
+}
+
+/* close commented backslash hack */
 /* BASE STYLES
 ============================================================================= */
-/* line 6, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 html {
   font-size: 62.5%;
   margin: 0;
@@ -9,7 +146,7 @@ html {
   overflow-y: hidden;
 }
 
-/* line 7, ../sass/app.scss */
+/* line 118, ../sass/app.scss */
 body {
   background-color: #000;
   font-family: 'Lato', sans-serif;
@@ -22,18 +159,18 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* line 17, ../sass/app.scss */
+/* line 128, ../sass/app.scss */
 .page {
   width: 100%;
 }
 
-/* line 22, ../sass/app.scss */
+/* line 133, ../sass/app.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-/* line 27, ../sass/app.scss */
+/* line 138, ../sass/app.scss */
 h1 {
   font-size: 24px;
   font-size: 2.4rem;
@@ -43,7 +180,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* line 35, ../sass/app.scss */
+/* line 146, ../sass/app.scss */
 h2 {
   font-size: 1.6rem;
   font-weight: 400;
@@ -52,12 +189,12 @@ h2 {
   text-transform: uppercase;
 }
 
-/* line 43, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .page a {
   margin-top: 50px;
 }
 
-/* line 44, ../sass/app.scss */
+/* line 155, ../sass/app.scss */
 #about {
   color: #333;
   position: absolute;
@@ -66,93 +203,119 @@ h2 {
   width: 100%;
 }
 
+/* line 157, ../sass/app.scss */
+header {
+  font-size: 1.4rem;
+  font-size: 14px;
+}
+/* line 162, ../sass/app.scss */
+header nav li {
+  float: right;
+  margin-right: 10px;
+}
+/* line 166, ../sass/app.scss */
+header .premier-league-logo {
+  font-weight: 100;
+}
+/* line 169, ../sass/app.scss */
+header .premier-league-logo span, header .premier-league-logo img {
+  width: 30px;
+  display: inline-block;
+}
+
+/* TEAMS */
+/* line 179, ../sass/app.scss */
+.chelseafc {
+  background: #0e1e7d;
+}
+
 /* PAGES
 ============================================================================= */
-/* line 49, ../sass/app.scss */
+/* line 187, ../sass/app.scss */
 .container {
   max-width: 800px;
-  margin: 30px auto 0px auto;
+  margin: 0px auto 0px auto;
   width: 100%;
 }
 
-/* line 56, ../sass/app.scss */
+/* line 194, ../sass/app.scss */
 .page-league .container {
   max-width: 500px;
 }
 
-/* line 61, ../sass/app.scss */
+/* line 199, ../sass/app.scss */
 table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   margin: 30px 0 0 0;
 }
-/* line 67, ../sass/app.scss */
+/* line 205, ../sass/app.scss */
 table td, table th {
   text-align: left;
   white-space: nowrap;
   padding: 2px 0 5px;
 }
-/* line 74, ../sass/app.scss */
+/* line 212, ../sass/app.scss */
 table thead tr th {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
-/* line 79, ../sass/app.scss */
+/* line 217, ../sass/app.scss */
 table th {
   font-weight: 700;
 }
-/* line 83, ../sass/app.scss */
+/* line 221, ../sass/app.scss */
 table tbody > tr:nth-child(2n+1) {
   font-weight: 100;
 }
-/* line 87, ../sass/app.scss */
+/* line 225, ../sass/app.scss */
 table tbody > tr:nth-child(2n+2) {
   font-weight: 300;
 }
 
-/* line 97, ../sass/app.scss */
+/* line 235, ../sass/app.scss */
 table.league tbody > tr:nth-child(5) td {
   border-top: 1px dotted rgba(255, 255, 255, 0.25);
   border-bottom: 1px dotted rgba(255, 255, 255, 0.25);
 }
-/* line 102, ../sass/app.scss */
+/* line 240, ../sass/app.scss */
 table.league tbody > tr:nth-child(18) td {
   border-top: 1px dotted rgba(255, 255, 255, 0.25);
 }
 
-/* line 107, ../sass/app.scss */
+/* line 245, ../sass/app.scss */
 a {
   text-decoration: none;
   color: #fff;
 }
 
-/* line 114, ../sass/app.scss */
+/* line 252, ../sass/app.scss */
 .page-fixtures .container {
   max-width: 610px;
 }
-/* line 117, ../sass/app.scss */
+/* line 255, ../sass/app.scss */
 .page-fixtures table tbody td:nth-child(2) {
   text-align: right;
 }
-/* line 121, ../sass/app.scss */
+/* line 259, ../sass/app.scss */
 .page-fixtures table tbody td:nth-child(3) {
   text-align: center;
   font-weight: 100;
 }
 
-/* line 127, ../sass/app.scss */
+/* line 265, ../sass/app.scss */
 .page-home {
   background: #00D0BC;
   color: #00907c;
 }
 
-/* line 128, ../sass/app.scss */
+/* line 266, ../sass/app.scss */
 .page-about {
   background: #E59400;
   color: #a55400;
 }
 
-/* line 129, ../sass/app.scss */
+/* line 267, ../sass/app.scss */
 .page-contact {
   background: #ffa6bb;
   color: #9e0000;
@@ -160,19 +323,19 @@ a {
 
 /* ANIMATIONS
 ============================================================================= */
-/* line 134, ../sass/app.scss */
+/* line 272, ../sass/app.scss */
 .page.ng-leave {
   z-index: 9999;
 }
 
-/* line 135, ../sass/app.scss */
+/* line 273, ../sass/app.scss */
 .page.ng-enter {
   z-index: 8888;
 }
 
 /* page specific animations ------------------------ */
 /* league -------------------------- */
-/* line 140, ../sass/app.scss */
+/* line 278, ../sass/app.scss */
 .page-league.ng-leave {
   -webkit-transform-origin: 0% 0%;
   -webkit-animation: rotateFall 1s both ease-in;
@@ -182,7 +345,7 @@ a {
   animation: rotateFall 1s both ease-in;
 }
 
-/* line 148, ../sass/app.scss */
+/* line 286, ../sass/app.scss */
 .page-league.ng-enter {
   -webkit-animation: scaleUp 0.5s both ease-in;
   -moz-animation: scaleUp 0.5s both ease-in;
@@ -190,14 +353,14 @@ a {
 }
 
 /* team ------------------------ */
-/* line 155, ../sass/app.scss */
+/* line 293, ../sass/app.scss */
 .page-team.ng-leave {
   -webkit-animation: slideOutLeft 0.5s both ease-in;
   -moz-animation: slideOutLeft 0.5s both ease-in;
   animation: slideOutLeft 0.5s both ease-in;
 }
 
-/* line 160, ../sass/app.scss */
+/* line 298, ../sass/app.scss */
 .page-team.ng-enter {
   -webkit-animation: slideInRight 0.5s both ease-in;
   -moz-animation: slideInRight 0.5s both ease-in;
@@ -205,7 +368,7 @@ a {
 }
 
 /* fixtures ---------------------- */
-/* line 167, ../sass/app.scss */
+/* line 305, ../sass/app.scss */
 .page-fixtures.ng-leave {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: rotateOutNewspaper .5s both ease-in;
@@ -215,7 +378,7 @@ a {
   animation: rotateOutNewspaper .5s both ease-in;
 }
 
-/* line 175, ../sass/app.scss */
+/* line 313, ../sass/app.scss */
 .page-fixtures.ng-enter {
   -webkit-animation: slideInUp 0.5s both ease-in;
   -moz-animation: slideInUp 0.5s both ease-in;

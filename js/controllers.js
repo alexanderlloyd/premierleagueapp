@@ -7,9 +7,10 @@ angular.module('PremierLeagueApp.controllers', [])
 
 
    /* teams controller */
-  .controller('teamsController', function($scope, footballdataAPIservice) {
+  .controller('teamsController', function($scope, $rootScope,  footballdataAPIservice) {
     $scope.teamsList = [];
     $scope.pageClass = 'page-league';
+
 
      /* filter team name - remove FC, London AFC*/
     $scope.teamName = function(name) {
@@ -27,12 +28,14 @@ angular.module('PremierLeagueApp.controllers', [])
   })
   
   /* team controller */
-  .controller('teamController', function($scope, $routeParams, footballdataAPIservice) {
+  .controller('teamController', function($scope, $routeParams, $rootScope, footballdataAPIservice) {
     $scope.id = $routeParams.id;
     $scope.team = [];
     $scope.teamDetails = [];
     $scope.pageClass = 'page-team';
 
+   
+   
 
 
   /*Calculate age */
