@@ -33,4 +33,4 @@ console.log(currentTime);
 	var str = (!value) ? '' : value.replace(/ /g, '');
 	return str.toLowerCase();
 	};
-}); 
+});

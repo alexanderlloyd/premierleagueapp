@@ -7,15 +7,16 @@ angular.module('PremierLeagueApp.controllers', [])
 
 
    /* teams controller */
-  .controller('teamsController', function($scope, $rootScope,  footballdataAPIservice) {
+  .controller('teamsController', function($scope,   footballdataAPIservice) {
     $scope.teamsList = [];
     $scope.pageClass = 'page-league';
 
 
      /* filter team name - remove FC, London AFC*/
-    $scope.teamName = function(name) {
+   $scope.teamName = function(name) {
 	    return name.replace(/AFC|London|FC/ig, "");
-	};    
+	};   
+
      /* filter out URL to retrieve team ID */
     $scope.teamID = function(url) {
 	    return url.substr(url.lastIndexOf('/') + 1);
@@ -28,7 +29,7 @@ angular.module('PremierLeagueApp.controllers', [])
   })
   
   /* team controller */
-  .controller('teamController', function($scope, $routeParams, $rootScope, footballdataAPIservice) {
+  .controller('teamController', function($scope, $routeParams, footballdataAPIservice) {
     $scope.id = $routeParams.id;
     $scope.team = [];
     $scope.teamDetails = [];

@@ -114,7 +114,7 @@ input, select {
 /* BASE STYLES
 ============================================================================= */
 
-html         { font-size: 62.5%; margin:0; padding:0; overflow-y:hidden;}
+html         { font-size: 62.5%; margin:0; padding:0; }
 body{
 	  background-color: #000;
 	  font-family: 'Lato', sans-serif;
@@ -127,6 +127,8 @@ body{
 }
 .page        {  
 	width:100%; 
+	position: absolute;
+	top:0;
 	
 }
 
@@ -136,50 +138,105 @@ h1 , h2, h3, h4, h5, h6{
 }
 
 h1 	{  
-	font-size:24px;
-	font-size: 2.4rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-align: center;
+	font-size:14px;
+	font-size: 1.4rem;
+    font-weight: 500;
+    text-align: left;
     text-transform: uppercase;
+
+    .light{
+    	font-weight: 300;
+    }
 }
-h2 	{  
-	font-size: 1.6rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-align: center;
-    text-transform: uppercase;
+h1.main-title{
+	float:left;
+	margin-left:18px;
+	line-height:2;
 }
 
-.page a     { margin-top:50px; }
-#about      { color:#333; position:absolute; text-align:center; top:50px; width:100%; }
+h2 	{  
+	font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.secondary-title{
+    	color:rgba(255,255,255,1);
+    }
+}
+
+
 
 header{
-
+	 border-bottom: 1px solid #fff;
+    padding: 10px 0px;
 	font-size: 1.4rem;
 	font-size:14px;
+	margin-bottom:30px;
 
 	nav li{
 		float:right;
-		margin-right:10px;
+		margin-right:18px;
 	}
-	.premier-league-logo{
+
+	.team-icon img {
+    		width: 26px;
+    		margin-top:2px;
+	}
+
+	.table-logo{
 		
 		font-weight:100;
 		span,img{
-			width:30px;
-			display:inline-block;
+			display: inline-block;
+    		width: 26px;
 		}
 	}
 }
 
+.container{
+	padding: 0px 18px 50px 18px;
+	 -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;   
+}
 
 /* TEAMS */
 
 .chelseafc{
-	background:rgba(14,30,125,1);
+	background:rgba(15,81,147,1);
 }
 
+.manchestercityfc{
+	background:rgba(47,185,234,1);
+}
+
+
+.menu {
+	
+	img,span{
+		width:26px;
+		display:block;
+	}
+}
+
+
+.desktop{
+		display:block!important;
+	}
+
+	.mobile{
+		display:none!important;
+	}
+
+	.desktop-inline{
+		display:inline-block!important;
+	}
+
+	.mobile-inline{
+		display:none!important;
+	}
 
 /* PAGES
 ============================================================================= */
@@ -193,6 +250,28 @@ header{
 .page-league{
 	.container{
 		max-width:500px;
+	}
+
+	tbody  td:nth-child(2){
+	 text-align: left;
+	}
+
+	.menu {
+		
+				zoom: 1;
+				filter: alpha(opacity=30);
+				opacity: 0.3;
+		
+	}
+}
+
+.page-team{
+	.menu {
+		li:nth-child(2){
+			zoom: 1;
+			filter: alpha(opacity=30);
+			opacity: 0.3;
+		}
 	}
 }
 
@@ -209,21 +288,28 @@ td, th {
    
 }
 
-thead tr th{
-border-bottom: 1px solid rgba(255,255,255,0.25);
+table thead th:last-child{
+	text-align:right;
 }
-
 
 th {
 	font-weight:700;
 }
 
+tr{
+
+		&:hover{
+			background:none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
+		}
+}
+
 tbody > tr:nth-child(2n+1){
-	font-weight:100;
+	font-weight:300;
 }
 
 	tbody > tr:nth-child(2n+2){
 		font-weight:300;
+
 	}
 
 
@@ -252,6 +338,10 @@ a{
 	.container{
 		max-width: 610px;
 		}
+		table tbody td:nth-child(1){
+			text-align: left;
+		}
+
 		table tbody td:nth-child(2){
 			text-align: right;
 		}
@@ -260,22 +350,33 @@ a{
 			text-align: center;
 			font-weight:100;
 		}
+
+		table tbody td:nth-child(4){
+			text-align: left;
+		}
+
+	.menu {
+		li:nth-child(1){
+			zoom: 1;
+			filter: alpha(opacity=30);
+			opacity: 0.3;
+		}
+	}
 }
 
-.page-home 		{ background:#00D0BC; color:#00907c; }
-.page-about 	{ background:#E59400; color:#a55400; }
-.page-contact 	{ background:#ffa6bb; color:#9e0000; }
 
 /* ANIMATIONS
 ============================================================================= */
 
+/*
 .page.ng-leave 	{ z-index:9999; }
 .page.ng-enter 	{ z-index:8888; }
-
+*/
 /* page specific animations ------------------------ */
 
 /* league -------------------------- */
-.page-league.ng-leave         {
+
+/*.page-league.ng-leave         {
     -webkit-transform-origin: 0% 0%;
 	-webkit-animation: rotateFall 1s both ease-in;
 	-moz-transform-origin: 0% 0%;
@@ -283,14 +384,31 @@ a{
 	transform-origin: 0% 0%;
 	animation: rotateFall 1s both ease-in;
 }
+
+
 .page-league.ng-enter 		{  
     -webkit-animation:scaleUp 0.5s both ease-in;
 	-moz-animation:scaleUp 0.5s both ease-in;
 	animation:scaleUp 0.5s both ease-in;    
+}*/
+
+.page.ng-leave         {
+       -webkit-animation:fadeOut 0.6s both ease-in;
+	-moz-animation:fadeOut 0.6s both ease-in;
+	animation:fadeOut 0.6s both ease-in;   
 }
 
+.page.ng-enter 		{  
+    -webkit-animation:fadeIn 2s both ease-in;
+	-moz-animation:fadeIn 2s both ease-in;
+	animation:fadeIn 2s both ease-in;    
+}
+
+
+
+
 /* team ------------------------ */
-.page-team.ng-leave        {
+/*.page-team.ng-leave        {
     -webkit-animation:slideOutLeft 0.5s both ease-in;
 	-moz-animation:slideOutLeft 0.5s both ease-in;
 	animation:slideOutLeft 0.5s both ease-in;   
@@ -300,9 +418,9 @@ a{
 	-moz-animation:slideInRight 0.5s both ease-in;
 	animation:slideInRight 0.5s both ease-in;    
 }
-
+*/
 /* fixtures ---------------------- */
-.page-fixtures.ng-leave      {
+/*.page-fixtures.ng-leave      {
     -webkit-transform-origin: 50% 50%;
 	-webkit-animation: rotateOutNewspaper .5s both ease-in;
 	-moz-transform-origin: 50% 50%;
@@ -314,6 +432,101 @@ a{
     -webkit-animation:slideInUp 0.5s both ease-in;
 	-moz-animation:slideInUp 0.5s both ease-in;
 	animation:slideInUp 0.5s both ease-in;  
+}*/
+
+@media only screen 
+and (max-width : 667px) {
+
+	tr{
+
+		&:hover{
+			background:none;
+		}
+	}
+
+	.desktop{
+		display:none!important;
+	}
+
+	.mobile{
+		display:block!important;
+	}
+
+	.desktop-inline{
+		display:none!important;
+	}
+
+	.mobile-inline{
+		display:inline-block!important;
+	}
+
+
+	.page-league{
+
+			thead  th:nth-child(3),thead th:nth-child(4),thead  th:nth-child(5),
+			tbody  td:nth-child(3),tbody  td:nth-child(4),tbody  td:nth-child(5){
+				display:none;
+			}
+		}
+
+	.page-team{
+
+			thead  th:nth-child(4),thead th:nth-child(5),thead  th:nth-child(6), ,thead  th:nth-child(7),
+			tbody  td:nth-child(4),tbody  td:nth-child(5),tbody  td:nth-child(6),tbody  td:nth-child(7){
+				display:none;
+			}
+		}
+
+	.page-fixtures{
+
+			table{
+				font-size:13px;
+				font-size:1.3rem;
+			
+
+				thead  th:nth-child(1),
+				tbody  td:nth-child(1){
+					display:none;
+				}
+
+				tbody td:nth-child(2){
+					text-align:left;
+				}
+			}
+		}
+
+}
+
+/* fade in */
+@-webkit-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity:1; }
+}
+
+@-moz-keyframes -keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity:1; }
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity:1; }
+}
+
+/* fade out */
+@-webkit-keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity:0; }
+}
+
+@-moz-keyframes -keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity:0; }
+}
+
+@keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity:0; }
 }
 
 /* rotate and fall */

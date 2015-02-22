@@ -1,38 +1,39 @@
 <div class="wrapper {{teamDetails.name | nospace}}">
   <header>
-    <nav>
-        <ul class="clearfix">
+    <h1 class="main-title"><span class="desktop-inline">Premier League 2014/15 </span><span class="mobile-inline">EPL 14/15 </span><span class="light">/ Squad</span></h1>
+    <nav class="menu">
+        <ul class="clearfix ">
           <li>
-            <a href="#" class="premier-league-logo">
-                <span ><img src="img/premier_league.svg" /></span>
+             <a href="./#/fixtures/{{teamDetails.id}}" class="fixtures-icon">
+                <span ><img src="img/fixtures-icon.svg" /></span>
+            </a>           
+          </li>
+          <li>
+            <a class="team-icon">
+                <span ><img src="img/players-icon.svg" /></span>
             </a>
           </li>
           <li>
-            <a href="./#/teams" class="team-icon">
-                <span ><img src="img/team_icon.svg" /></span>
-            </a>
-          </li>
-          <li>
-            <a href="./#/fixtures/{{teamDetails.id}}" class="fixtures-icon">
-                <span ><img src="img/fixtures_icon.svg" /></span>
+            <a href="./#/teams" class="table-logo">
+                <span ><img src="img/table-icon.svg" /></span>
             </a>
           </li>
     </nav>
 </header>
 <div class="container ">
   <section id="main">
-  <a href="./#/teams">League table</a>
-   <a href="./#/fixtures/{{teamDetails.id}}">Fixtures</a>
+  <!--a href="./#/teams">League table</a>
+   <a href="./#/fixtures/{{teamDetails.id}}">Fixtures</a-->
   <div>
-          <td>{{teamDetails.name}}</td>
+          <h2 class="secondary-title">{{teamDetails.name }}</h2>
 </div>
     <div>
        <table class="players">
       <thead>
         <tr>
+          <th>No.</th>
           <th>Name</th>
           <th>Position</th>
-          <th>Number</th>
           <th>DOB</th>
           <th>Nationality</th>
           <th>Contract Expires</th>
@@ -40,7 +41,7 @@
        </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="player in team.players">
+        <tr ng-repeat="player in team.players | orderBy: 'jerseyNumber'">
           <td>{{player.jerseyNumber}}</td>          
           <td>{{player.name}}</td>
           <td>{{player.position}}</td>
