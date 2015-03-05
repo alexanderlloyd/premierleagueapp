@@ -33,4 +33,9 @@ console.log(currentTime);
 	var str = (!value) ? '' : value.replace(/ /g, '');
 	return str.toLowerCase();
 	};
+})
+.filter('cleanteam', function () {
+    return function (input) {
+      return input ? input.replace('AFC', '').replace('FC', '').replace('London', ''):'';
+    }
 });

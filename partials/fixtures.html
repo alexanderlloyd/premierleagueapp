@@ -1,6 +1,6 @@
 <div class="wrapper {{teamDetails.name | nospace}}">
   <header>
-    <h1 class="main-title"><span class="desktop-inline">Premier League 2014/15 </span><span class="mobile-inline">EPL 14/15 </span><span class="light">/ Fixtures</span></h1>
+    <h1 class="main-title"><span class="desktop-inline">Premier League 2014/15 </span><span class="mobile-inline">EPL 14/15 </span><span class="light"> Fixtures</span></h1>
     <nav class="menu">
         <ul class="clearfix">
           <li>
@@ -25,7 +25,7 @@
   <!--a href="./#/teams">League table</a>
   <a href="./#/teams/{{teamDetails.id}}">Squad</a-->
   <div>
-          <h2 class="secondary-title">{{teamDetails.name }}</h2>
+          <h2 class="secondary-title">{{teamDetails.name |  cleanteam }}</h2>
 </div>
   <div class="main-content">
     <table class="result-table">
@@ -43,8 +43,8 @@
       <tbody>
         <tr ng-repeat="fixture in fixtures.fixtures ">
         <td>{{fixture.date | cmdate:'MM/dd/yyyy'}}</td>
-        <td>{{fixture.homeTeam}}</td>
-        <td>vs.</td>
+        <td>{{teamName(fixture.homeTeam) }}</td>
+        <td>&nbsp;v&nbsp;</td>
         <td>{{teamName(fixture.awayTeam)}}</td>
         <td>{{score(fixture.goalsHomeTeam)}}</td>
         <td>-</td>
@@ -56,4 +56,14 @@
 
 </section>
 </div>
+  <footer>
+    <div class="copyright clearfix">
+      <span class="copy-logo">&copy; </span><a class="lloyd-logo" href="http://www.alexanderlloyd.info"><img src="img/alexanderlloyd.svg" /></a>
+    </div>
+    <ul class="social-media clearfix">
+     <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.purepremier.com/"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/home?status=A%20simple,%20minimalist%20%26%20quick%20Premier%20League%20statistics%20site:%20http://www.purepremier.com/"><i class="fa fa-twitter"></i></a></li>
+       <!--li><a href="whatsapp://send" data-text="A simple, minimalist & quick Premier League statistics site:" data-href="http://www.purepremier.com/" class="wa_btn wa_btn_m"><i class="fa fa-whatsapp"></i></a></li-->
+    </ul>
+</footer>
 </div>

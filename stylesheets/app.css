@@ -143,6 +143,7 @@ html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 /* line 118, ../sass/app.scss */
@@ -156,22 +157,31 @@ body {
   margin: 0;
   padding: 0;
   letter-spacing: 0.02em;
+  position: relative;
+  height: 100%;
 }
 
-/* line 128, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .page {
   width: 100%;
-  position: absolute;
-  top: 0;
+  min-height: 100%;
+  position: relative;
 }
 
-/* line 135, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
+.wrapper {
+  width: 100%;
+  padding-top: 1px;
+  min-height: 100%;
+}
+
+/* line 144, ../sass/app.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-/* line 140, ../sass/app.scss */
+/* line 149, ../sass/app.scss */
 h1 {
   font-size: 14px;
   font-size: 1.4rem;
@@ -179,19 +189,19 @@ h1 {
   text-align: left;
   text-transform: uppercase;
 }
-/* line 147, ../sass/app.scss */
+/* line 156, ../sass/app.scss */
 h1 .light {
   font-weight: 300;
 }
 
-/* line 151, ../sass/app.scss */
+/* line 160, ../sass/app.scss */
 h1.main-title {
   float: left;
   margin-left: 18px;
   line-height: 2;
 }
 
-/* line 157, ../sass/app.scss */
+/* line 166, ../sass/app.scss */
 h2 {
   font-size: 1.4rem;
   font-weight: 300;
@@ -199,40 +209,96 @@ h2 {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 164, ../sass/app.scss */
+/* line 173, ../sass/app.scss */
 h2.secondary-title {
   color: white;
 }
 
-/* line 171, ../sass/app.scss */
+/* line 180, ../sass/app.scss */
 header {
-  border-bottom: 1px solid #fff;
-  padding: 10px 0px;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 0px;
   font-size: 1.4rem;
   font-size: 14px;
-  margin-bottom: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-/* line 178, ../sass/app.scss */
+/* line 190, ../sass/app.scss */
 header nav li {
   float: right;
-  margin-right: 18px;
+  margin-right: 20px;
 }
-/* line 183, ../sass/app.scss */
+/* line 195, ../sass/app.scss */
 header .team-icon img {
   width: 26px;
   margin-top: 2px;
 }
-/* line 188, ../sass/app.scss */
+/* line 200, ../sass/app.scss */
 header .table-logo {
   font-weight: 100;
 }
-/* line 191, ../sass/app.scss */
+/* line 203, ../sass/app.scss */
 header .table-logo span, header .table-logo img {
   display: inline-block;
-  width: 26px;
+  margin-top: 0px;
+  width: 24px;
 }
 
-/* line 198, ../sass/app.scss */
+/* line 212, ../sass/app.scss */
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 14px;
+  padding: 12px 0;
+  width: 100%;
+}
+/* line 217, ../sass/app.scss */
+footer .copyright {
+  margin-left: 18px;
+  float: left;
+}
+/* line 221, ../sass/app.scss */
+footer .copyright .copy-logo {
+  display: block;
+  float: left;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+/* line 229, ../sass/app.scss */
+footer .copyright .lloyd-logo, footer .copyright img {
+  float: left;
+  width: 30px;
+  display: block;
+}
+/* line 239, ../sass/app.scss */
+footer ul.social-media li {
+  float: right;
+  margin-right: 20px;
+  list-style: none;
+  width: 26px;
+}
+/* line 244, ../sass/app.scss */
+footer ul.social-media li a, footer ul.social-media li img {
+  width: 26px;
+  display: block;
+  font-size: 26px;
+}
+/* line 250, ../sass/app.scss */
+footer ul.social-media li .wa_btn {
+  width: 26px !important;
+  display: block !important;
+  font-size: 26px !important;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  display: block;
+}
+
+/* line 264, ../sass/app.scss */
 .container {
   padding: 0px 18px 50px 18px;
   -webkit-box-sizing: border-box;
@@ -243,145 +309,318 @@ header .table-logo span, header .table-logo img {
 }
 
 /* TEAMS */
-/* line 207, ../sass/app.scss */
-.chelseafc {
+/* line 275, ../sass/app.scss */
+.chelseafc .container {
   background: #0f5193;
 }
-
-/* line 211, ../sass/app.scss */
-.manchestercityfc {
-  background: #2fb9ea;
+/* line 278, ../sass/app.scss */
+.chelseafc header {
+  background: rgba(15, 81, 147, 0.9);
 }
 
-/* line 218, ../sass/app.scss */
+/* line 284, ../sass/app.scss */
+.manchestercityfc .container {
+  background: #2fb9ea;
+}
+/* line 288, ../sass/app.scss */
+.manchestercityfc header {
+  background: rgba(47, 185, 234, 0.9);
+}
+
+/* line 294, ../sass/app.scss */
+.fcarsenallondon .container {
+  background: #ed2f3d;
+}
+/* line 298, ../sass/app.scss */
+.fcarsenallondon header {
+  background: rgba(237, 47, 61, 0.9);
+}
+
+/* line 304, ../sass/app.scss */
+.manchesterunitedfc .container {
+  background: #d82b3c;
+}
+/* line 308, ../sass/app.scss */
+.manchesterunitedfc header {
+  background: rgba(216, 43, 60, 0.9);
+}
+
+/* line 315, ../sass/app.scss */
+.fcsouthampton .container {
+  background: #ea2f53;
+}
+/* line 319, ../sass/app.scss */
+.fcsouthampton header {
+  background: rgba(234, 47, 83, 0.9);
+}
+
+/* line 325, ../sass/app.scss */
+.liverpoolfc .container {
+  background: #ce294d;
+}
+/* line 329, ../sass/app.scss */
+.liverpoolfc header {
+  background: rgba(206, 41, 77, 0.9);
+}
+
+/* line 335, ../sass/app.scss */
+.tottenhamhotspurfc .container {
+  background: #112a56;
+}
+/* line 339, ../sass/app.scss */
+.tottenhamhotspurfc header {
+  background: rgba(17, 42, 86, 0.9);
+}
+
+/* line 345, ../sass/app.scss */
+.westhamunitedfc .container {
+  background: #5e1335;
+}
+/* line 349, ../sass/app.scss */
+.westhamunitedfc header {
+  background: rgba(94, 19, 53, 0.9);
+}
+
+/* line 355, ../sass/app.scss */
+.swanseacity .container {
+  background: black;
+}
+/* line 359, ../sass/app.scss */
+.swanseacity header {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* line 365, ../sass/app.scss */
+.stokecityfc .container {
+  background: #dd2c39;
+}
+/* line 369, ../sass/app.scss */
+.stokecityfc header {
+  background: rgba(221, 44, 57, 0.9);
+}
+
+/* line 375, ../sass/app.scss */
+.newcastleunited .container {
+  background: #21070e;
+}
+/* line 379, ../sass/app.scss */
+.newcastleunited header {
+  background: rgba(33, 7, 14, 0.9);
+}
+
+/* line 385, ../sass/app.scss */
+.evertonfc .container {
+  background: #1b3f87;
+}
+/* line 389, ../sass/app.scss */
+.evertonfc header {
+  background: rgba(27, 63, 135, 0.9);
+}
+
+/* line 395, ../sass/app.scss */
+.crystalpalace .container {
+  background: #1b458f;
+}
+/* line 399, ../sass/app.scss */
+.crystalpalace header {
+  background: rgba(27, 69, 143, 0.9);
+}
+
+/* line 405, ../sass/app.scss */
+.westbromwichalbion .container {
+  background: #101d51;
+}
+/* line 409, ../sass/app.scss */
+.westbromwichalbion header {
+  background: rgba(16, 29, 81, 0.9);
+}
+
+/* line 415, ../sass/app.scss */
+.hullcityfc .container {
+  background: #f49b31;
+}
+/* line 419, ../sass/app.scss */
+.hullcityfc header {
+  background: rgba(244, 155, 49, 0.9);
+}
+
+/* line 425, ../sass/app.scss */
+.sunderlandafc .container {
+  background: #eb172b;
+}
+/* line 429, ../sass/app.scss */
+.sunderlandafc header {
+  background: rgba(235, 23, 43, 0.9);
+}
+
+/* line 435, ../sass/app.scss */
+.queensparkrangers .container {
+  background: #2270aa;
+}
+/* line 439, ../sass/app.scss */
+.queensparkrangers header {
+  background: rgba(34, 112, 170, 0.9);
+}
+
+/* line 445, ../sass/app.scss */
+.fcburnley .container {
+  background: #51102e;
+}
+/* line 449, ../sass/app.scss */
+.fcburnley header {
+  background: rgba(81, 16, 46, 0.9);
+}
+
+/* line 455, ../sass/app.scss */
+.astonvillafc .container {
+  background: #77184a;
+}
+/* line 459, ../sass/app.scss */
+.astonvillafc header {
+  background: rgba(119, 24, 74, 0.9);
+}
+
+/* line 465, ../sass/app.scss */
+.leicestercity .container {
+  background: #20689e;
+}
+/* line 469, ../sass/app.scss */
+.leicestercity header {
+  background: rgba(32, 104, 158, 0.9);
+}
+
+/* line 476, ../sass/app.scss */
 .menu img, .menu span {
   width: 26px;
   display: block;
 }
 
-/* line 225, ../sass/app.scss */
+/* line 483, ../sass/app.scss */
 .desktop {
   display: block !important;
 }
 
-/* line 229, ../sass/app.scss */
+/* line 487, ../sass/app.scss */
 .mobile {
   display: none !important;
 }
 
-/* line 233, ../sass/app.scss */
+/* line 491, ../sass/app.scss */
 .desktop-inline {
   display: inline-block !important;
 }
 
-/* line 237, ../sass/app.scss */
+/* line 495, ../sass/app.scss */
 .mobile-inline {
   display: none !important;
 }
 
 /* PAGES
 ============================================================================= */
-/* line 244, ../sass/app.scss */
+/* line 502, ../sass/app.scss */
 .container {
-  max-width: 800px;
-  margin: 0px auto 0px auto;
+  margin: 0 auto;
   width: 100%;
+  padding-top: 77px;
+  padding-bottom: 90px;
 }
 
-/* line 251, ../sass/app.scss */
+/* line 509, ../sass/app.scss */
+#main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* line 515, ../sass/app.scss */
 .page-league .container {
   max-width: 500px;
 }
-/* line 255, ../sass/app.scss */
+/* line 519, ../sass/app.scss */
 .page-league tbody td:nth-child(2) {
   text-align: left;
 }
-/* line 259, ../sass/app.scss */
+/* line 523, ../sass/app.scss */
 .page-league .menu {
   zoom: 1;
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-/* line 270, ../sass/app.scss */
+/* line 534, ../sass/app.scss */
 .page-team .menu li:nth-child(2) {
   zoom: 1;
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-/* line 278, ../sass/app.scss */
+/* line 542, ../sass/app.scss */
 table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   margin: 30px 0 0 0;
 }
-/* line 284, ../sass/app.scss */
+/* line 548, ../sass/app.scss */
 table td, table th {
   text-align: left;
   white-space: nowrap;
   padding: 2px 0 5px;
 }
-/* line 291, ../sass/app.scss */
+/* line 555, ../sass/app.scss */
 table table thead th:last-child {
   text-align: right;
 }
-/* line 295, ../sass/app.scss */
+/* line 559, ../sass/app.scss */
 table th {
   font-weight: 700;
 }
-/* line 301, ../sass/app.scss */
-table tr:hover {
-  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
-}
-/* line 306, ../sass/app.scss */
+/* line 564, ../sass/app.scss */
 table tbody > tr:nth-child(2n+1) {
   font-weight: 300;
 }
-/* line 310, ../sass/app.scss */
+/* line 568, ../sass/app.scss */
 table tbody > tr:nth-child(2n+2) {
   font-weight: 300;
 }
 
-/* line 321, ../sass/app.scss */
+/* line 579, ../sass/app.scss */
 table.league tbody > tr:nth-child(5) td {
   border-top: 1px dotted rgba(255, 255, 255, 0.25);
   border-bottom: 1px dotted rgba(255, 255, 255, 0.25);
 }
-/* line 326, ../sass/app.scss */
+/* line 584, ../sass/app.scss */
 table.league tbody > tr:nth-child(18) td {
   border-top: 1px dotted rgba(255, 255, 255, 0.25);
 }
 
-/* line 331, ../sass/app.scss */
+/* line 589, ../sass/app.scss */
 a {
   text-decoration: none;
   color: #fff;
 }
 
-/* line 338, ../sass/app.scss */
-.page-fixtures .container {
-  max-width: 610px;
-}
-/* line 341, ../sass/app.scss */
+/* line 599, ../sass/app.scss */
 .page-fixtures table tbody td:nth-child(1) {
   text-align: left;
 }
-/* line 345, ../sass/app.scss */
+/* line 603, ../sass/app.scss */
 .page-fixtures table tbody td:nth-child(2) {
   text-align: right;
 }
-/* line 349, ../sass/app.scss */
+/* line 607, ../sass/app.scss */
 .page-fixtures table tbody td:nth-child(3) {
   text-align: center;
   font-weight: 100;
 }
-/* line 354, ../sass/app.scss */
+/* line 612, ../sass/app.scss */
 .page-fixtures table tbody td:nth-child(4) {
   text-align: left;
 }
-/* line 359, ../sass/app.scss */
+/* line 616, ../sass/app.scss */
+.page-fixtures #main {
+  max-width: 610px;
+}
+/* line 621, ../sass/app.scss */
 .page-fixtures .menu li:nth-child(1) {
   zoom: 1;
   filter: alpha(opacity=30);
@@ -411,14 +650,14 @@ a {
 	-moz-animation:scaleUp 0.5s both ease-in;
 	animation:scaleUp 0.5s both ease-in;    
 }*/
-/* line 395, ../sass/app.scss */
+/* line 657, ../sass/app.scss */
 .page.ng-leave {
   -webkit-animation: fadeOut 0.6s both ease-in;
   -moz-animation: fadeOut 0.6s both ease-in;
   animation: fadeOut 0.6s both ease-in;
 }
 
-/* line 401, ../sass/app.scss */
+/* line 663, ../sass/app.scss */
 .page.ng-enter {
   -webkit-animation: fadeIn 2s both ease-in;
   -moz-animation: fadeIn 2s both ease-in;
@@ -451,56 +690,79 @@ a {
 	-moz-animation:slideInUp 0.5s both ease-in;
 	animation:slideInUp 0.5s both ease-in;  
 }*/
-@media only screen and (max-width: 667px) {
-  /* line 442, ../sass/app.scss */
-  tr:hover {
-    background: none;
+@media only screen and (min-width: 667px) {
+  /* line 703, ../sass/app.scss */
+  table tr:hover {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
+  }
+}
+@media only screen and (min-width: 1500px) {
+  /* line 714, ../sass/app.scss */
+  .page-team #main {
+    font-size: 120%;
+    max-width: 1000px;
   }
 
-  /* line 447, ../sass/app.scss */
+  /* line 721, ../sass/app.scss */
+  .page-league #main {
+    font-size: 120%;
+    max-width: 600px;
+  }
+
+  /* line 728, ../sass/app.scss */
+  .page-fixtures #main {
+    font-size: 120%;
+  }
+  /* line 732, ../sass/app.scss */
+  .page-fixtures #main {
+    max-width: 700px;
+  }
+}
+@media only screen and (max-width: 667px) {
+  /* line 747, ../sass/app.scss */
   .desktop {
     display: none !important;
   }
 
-  /* line 451, ../sass/app.scss */
+  /* line 751, ../sass/app.scss */
   .mobile {
     display: block !important;
   }
 
-  /* line 455, ../sass/app.scss */
+  /* line 755, ../sass/app.scss */
   .desktop-inline {
     display: none !important;
   }
 
-  /* line 459, ../sass/app.scss */
+  /* line 759, ../sass/app.scss */
   .mobile-inline {
     display: inline-block !important;
   }
 
-  /* line 466, ../sass/app.scss */
+  /* line 766, ../sass/app.scss */
   .page-league thead th:nth-child(3), .page-league thead th:nth-child(4), .page-league thead th:nth-child(5),
   .page-league tbody td:nth-child(3), .page-league tbody td:nth-child(4), .page-league tbody td:nth-child(5) {
     display: none;
   }
 
-  /* line 474, ../sass/app.scss */
+  /* line 774, ../sass/app.scss */
   .page-team thead th:nth-child(4), .page-team thead th:nth-child(5), .page-team thead th:nth-child(6), .page-team thead th:nth-child(7),
   .page-team tbody td:nth-child(4), .page-team tbody td:nth-child(5), .page-team tbody td:nth-child(6), .page-team tbody td:nth-child(7) {
     display: none;
   }
 
-  /* line 482, ../sass/app.scss */
+  /* line 782, ../sass/app.scss */
   .page-fixtures table {
     font-size: 13px;
     font-size: 1.3rem;
   }
-  /* line 487, ../sass/app.scss */
+  /* line 787, ../sass/app.scss */
   .page-fixtures table thead th:nth-child(1),
   .page-fixtures table tbody td:nth-child(1) {
     display: none;
   }
-  /* line 492, ../sass/app.scss */
-  .page-fixtures table tbody td:nth-child(2) {
+  /* line 792, ../sass/app.scss */
+  .page-fixtures table tbody td:nth-child(2), .page-fixtures table tbody td:nth-child(3) {
     text-align: left;
   }
 }

@@ -9,8 +9,11 @@ angular.module('PremierLeagueApp.controllers', [])
    /* teams controller */
   .controller('teamsController', function($scope,   footballdataAPIservice) {
     $scope.teamsList = [];
-    $scope.pageClass = 'page-league';
+    //$scope.pageClass = 'page-league';
 
+    $scope.$on('$viewContentLoaded', function(){
+      $scope.loadedClass = 'page-league';
+  });
 
      /* filter team name - remove FC, London AFC*/
    $scope.teamName = function(name) {
@@ -33,11 +36,18 @@ angular.module('PremierLeagueApp.controllers', [])
     $scope.id = $routeParams.id;
     $scope.team = [];
     $scope.teamDetails = [];
-    $scope.pageClass = 'page-team';
+    //$scope.pageClass = '';
 
+ /* filter team name - remove FC, London AFC*/
+   $scope.teamName = function(name) {
+      return name.replace(/AFC|London|FC/ig, "");
+  };  
    
-   
+  $scope.$on('$viewContentLoaded', function(){
+      $scope.loadedClass = 'page-team';
+  });
 
+  
 
   /*Calculate age */
    $scope.calculateAge = function(birthday) { // pass in player.dateOfBirth
@@ -61,9 +71,11 @@ angular.module('PremierLeagueApp.controllers', [])
     $scope.id = $routeParams.id;
     $scope.fixtures = [];
     $scope.teamDetails = [];
-    $scope.pageClass = 'page-fixtures';
+   // $scope.pageClass = 'page-fixtures';
 
-  
+   $scope.$on('$viewContentLoaded', function(){
+      $scope.loadedClass = 'page-fixtures';
+  });
 
     /* filter team name - remove FC, London AFC*/
     $scope.score= function(score) {
